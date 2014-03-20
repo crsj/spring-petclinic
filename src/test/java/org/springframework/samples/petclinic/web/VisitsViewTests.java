@@ -43,12 +43,12 @@ import org.springframework.web.context.WebApplicationContext;
  * @author Arjen Poutsma
  * @author Michael Isvy
  */
-@Ignore
+
 @RunWith(SpringJUnit4ClassRunner.class)
 @WebAppConfiguration
 @ContextConfiguration("VisitsViewTests-config.xml")
 @ActiveProfiles("jdbc")
-public class VisitsViewTests {
+@Ignore public class VisitsViewTests {
 
     @Autowired
     private WebApplicationContext webApplicationContext;
@@ -61,7 +61,7 @@ public class VisitsViewTests {
     }
     
     @Test
-    public void getVisitsXml() throws Exception {
+    @Ignore public void getVisitsXml() throws Exception {
         ResultActions actions = this.mockMvc.perform(get("/vets.xml").accept(MediaType.APPLICATION_XML));
         actions.andDo(print()); // action is logged into the console
         actions.andExpect(status().isOk());
