@@ -20,4 +20,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @ActiveProfiles("jpa")
 public class ClinicServiceJpaTests extends AbstractClinicServiceTests {
 
+
+//comment
+
 }
